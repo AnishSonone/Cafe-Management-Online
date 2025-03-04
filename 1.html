@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        * {
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      scroll-padding-top: 2rem;
+      list-style: none;
+      text-decoration: none;
+    }
+    *::selection {
+      background: var(--main-color);
+      color: #fff;
+    }
+    :root {
+      --main-color: #990202;
+      --text-color: #2a271c;
+      --bg-color: #0bd1e7;
+  
+      --big-font: 4rem;
+      --h2-font: 2.24rem;
+      --p-font: 0.9rem;
+    }
+    section {
+      padding: 50px 10%;
+    }
+    body.active {
+      --bg-color: #1e1c2a;
+      --text-color: #fff;
+    }
+      body {
+        color: var(--text-color);
+        background: var(--bg-color);
+      }
+      #darkmode {
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+
+
+   .navbar {
+  display: flex;
+  justify-content:left;
+  gap: 80PX;
+  background-color:  #c67d47;
+  padding: 10px;
+}
+
+.nav-item {
+  margin-right: 5px;
+}
+
+.nav-item a {
+  color: rgb(231, 10, 10);
+  text-decoration: none;
+}
+
+.nav-item a:hover {
+  text-decoration: underline;
+}
+
+
+.nevbar{
+  background: #c67d47; 
+  font-family:  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.nevdiv{
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.logo a{
+  font-size: 35px;
+  font-weight: 600;
+  color: #edf0f1;
+}
+li{
+  list-style: none;
+  display: inline-block;
+}
+
+li a{
+  color:black;
+  font-size: 18px;
+  font-weight:bold;
+  margin-right: 15px;
+}
+button{
+  background-color: #1e1c2a;
+  margin-left: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  width: 90px;
+}
+button a{
+  color: #edf0f1;
+  font-weight: bold;
+  font-size: 25px;}
+
+  
+      /* Hero Section */
+
+.hero {
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  align-items: center;
+}
+.hero_content h1 {
+  font-size: 72px;
+  line-height: 1.2;
+  font-weight: 400;
+  -ms-flow-into: var(--main-color);
+}
+.explore_btn {
+  background: #d42828;
+  align-self: flex-start;
+}
+
+
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="phone"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: vertical;
+}
+h1{
+    text-align: center;
+}
+    </style>
+
+</head>
+ 
+
+<body>
+    <header>
+      
+        
+
+        <ul class="navbar">
+          <li><a href="1.html" >registration</a></li>
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="contact.html">Contact</a></li>
+           
+        </ul>
+       
+    </header>
+<br><br>
+    
+    <main>
+        <h1 class="forts" >REGISTRATION FORM</h1>
+
+        <br><br><br>
+        <section class="contact-form">
+          <h2> PLEASE SUBMIT YOUR  <br>INFORMATION</h2>
+          <form>
+            <div class="form-group">
+              <label for="name">Your Name:</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email:</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone no.">Phone No.:</label>
+                <input type="phone" name="phone"  required>
+              </div>
+            <div class="form-group">
+              <label for="message">ADDRESS:</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">SUBMIT </button>
+          </form>
+        </section>
+        <br><br><br><br>
+      </main>
+
+<a href="homepage.html" style="display:block; margin-top:20px; text-align:center; font-size:20px;">Next</a>
+
+<a href="home.html" style="display: block; margin-top: 20px; padding: 10px; background: blue; color: white; text-align: center; text-decoration: none; width: 100px;">Next</a>
+
+<a href="homepage.html" style="display: block; margin-top: 20px; padding: 10px; background: blue; color: white; text-align: center; text-decoration: none; width: 100px;">Next</a>
+</body>
+</html>

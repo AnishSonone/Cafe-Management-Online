@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Pizza Landing Page</title>
+    <!-- Box Icons -->
+    <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <style>
+/* Google Fonts */
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    list-style: none;
+    text-decoration: none;
+  }
+  *::selection {
+    background: var(--main-color);
+    color: #fff;
+  }
+  :root {
+    --main-color: #ff1111;
+    --text-color: #2a271c;
+    --bg-color: #0bd1e7;
+
+    --big-font: 4rem;
+    --h2-font: 2.24rem;
+    --p-font: 0.9rem;
+  }
+  section {
+    padding: 50px 10%;
+  }
+  body.active {
+    --bg-color: #1e1c2a;
+    --text-color: #fff;
+  }
+  body {
+    color: var(--text-color);
+    background: var(--bg-color);
+  }
+  #darkmode {
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+
+  /* header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #04e4e4;
+    padding: 18px 100px;
+    box-shadow: 0 0.5rem 50rem rgba(0, 0, 0, 0.1);
+  }
+  .logo {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--main-color);
+  }
+  .navbar {
+    display: flex;
+  }
+  .navbar a {
+    font-size: 1rem;
+    padding: 10px 20px;
+    color: var(--text-color);
+    font-weight: 500;
+  }
+  .navbar a:hover {
+    color: var(--main-color);
+  }
+  #menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+  } */
+
+   .navbar {
+  display: flex;
+  justify-content:left;
+  gap: 80PX;
+  background-color:   #c67d47;
+  padding: 10px;
+}
+
+.nav-item {
+  margin-right: 5px;
+}
+
+.nav-item a {
+  color: rgb(231, 10, 10);
+  text-decoration: none;
+}
+
+.nav-item a:hover {
+  text-decoration: underline;
+} 
+
+
+
+/* -----------------------------------------------------menu nevbar ----------------------------------------------------------------------   */
+
+.nevbar{
+  background: #c67d47; 
+  font-family:  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.nevdiv{
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.logo a{
+  font-size: 35px;
+  font-weight: 600;
+  color: #edf0f1;
+}
+li{
+  list-style: none;
+  display: inline-block;
+}
+
+li a{
+  color:black;
+  font-size: 18px;
+  font-weight:bold;
+  margin-right: 15px;
+}
+button{
+  background-color: #1e1c2a;
+  margin-left: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  width: 90px;
+}
+button a{
+  color: #edf0f1;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+  .home-img img {
+    width: 100%;
+  }
+  .home-text h1 {
+    font-size: var(--big-font);
+    color: var(--main-color);
+  }
+  .home-text h2 {
+    font-size: var(--h2-font);
+    margin: 1rem 0 1rem;
+  }
+  .btn {
+    display: inline-block;
+    background: var(--main-color);
+    padding: 10px 20px;
+    border-radius: 0.5rem;
+    color: #fff;
+  }
+  .btn:hover {
+    background: #00ff00;
+  }
+  .about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .about-img img {
+    max-width: 80%;
+    border-radius: 0.5rem;
+  }
+  .about-text span {
+    color: var(--main-color);
+    font-weight: 500;
+  }
+  .about-text h2 {
+    font-size: var(--h2-font);
+  }
+  .about-text p {
+    margin: 0.8rem 0 1.8rem;
+  }
+  .heading {
+    text-align: center;
+    font-size: large;
+   
+  }
+  .heading span {
+    color: var(--main-color);
+    font-weight: 800;
+  }
+  .heading h2 {
+    font-size:var(--h2-font)
+  }
+  
+  .servives-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  .s-box {
+    text-align: center;
+  }
+  .s-box p{
+    text-align: left;
+  }
+  .s-box img {
+    width: 400px;
+    height: 400px;
+  }
+  .s-box h3 {
+    margin: 4px 0 10px;
+  }
+    @media (max-width: 921px) {
+    header {
+      padding: 14px 41px;
+    }
+    :root{
+      --big-font: 3rem;
+      --h2-font: 1.7rem;
+    }
+  }
+  @media (max-width: 768px) {
+    section {
+      padding: 50px 8%;
+    }
+    #menu-icon {
+      display: initial;
+      color: var(--text-color);
+    }
+    header .navbar {
+      position: absolute;
+      top: -400px;
+      left: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      background: var(--bg-color);
+      box-shadow: 0 4px 4px rgb(0 0 0 / 10%);
+      transition: 0.2s ease;
+    }
+    .navbar.active {
+      top: 100%;
+    }
+    .navbar a {
+      padding: 1.5rem;
+      display: block;
+      background: var(--bg-color);
+    }
+    
+  }
+  @media (max-width: 715px) {
+    header {
+      padding: 10px 16px;
+    }
+    .home {
+      grid-template-columns: 1fr;
+    }
+    .about {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    .about-img {
+      order: 2;
+    }
+  }
+  @media (max-width: 515px) {
+    .connect {
+      flex-direction: column;
+    }
+    .connect .btn {
+      margin-top: 1rem;
+    }
+  }
+  @media (max-width: 450px) {
+    :root {
+      --big-font: 2rem;
+      --h2-font: 1.4rem;
+    }
+    .home-text {
+      padding-top: 4rem;
+    }
+  }
+</style>
+
+</head>
+<body>
+    <!-- Navbar -->
+  
+       
+       
+
+        <ul class="navbar">
+          
+          <li><a href="1.html" >registration</a></li>
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="contact.html">Contact</a></li>
+           
+        </ul>
+      
+
+
+    <!-- Service -->
+    <section class="services" id="services">
+        <div class="heading">
+            <span>Services</span>
+            <h2>We provide best food services</h2>
+        </div>
+
+        <div class="servives-container">
+            <!-- Box 1 -->
+            <div class="s-box"> 
+
+<img src="https://static.vecteezy.com/system/resources/previews/002/199/002/original/online-concept-coffee-shop-delivery-on-mobile-food-and-drink-order-application-vector.jpg"  >
+                
+                <div class="s-box p">              
+                <p>All the query related to your order please contact us .
+                  Your order will reach to you in the time.
+                   Diverse Menu: Explore a wide array of pizza options, from traditional favorites to creative combinations. 
+                   Customize your order to suit your cravings, and we'll make it just the way you like it.
+                </p>
+                </div>
+            </div>
+            
+
+            <!-- Box 2 -->
+            <div class="s-box">
+                <img src="https://static.vecteezy.com/system/resources/previews/001/234/147/original/coffee-shop-delivery-on-mobile-vector.jpg" >
+                <h1>Delivery</h1>
+                <p> Thankyou for choosing us you may be happy with us and whenever your order is recieved. Convenience at Your Door : Whether you're
+                    enjoying a night in, hosting a party, or just don't feel like cooking, our pizza delivery brings the convenience of a delicious 
+                    meal straight to your door.we are sure to process the order and we will notify when it has been noticed.</p>
+            </div>
+
+
+            <!-- Box 3 -->
+            <div class="s-box">
+                <img src="https://www.rappler.com/tachyon/2021/01/141418123_229486262138378_1580527086286611284_o.jpg">
+                <h1>Delivered</h1>
+                <p>Your Home Services customer area centralizes information relating to your home services. You will thus be able to contact and consult us.
+                Fast and Reliable: We understand that hunger can't wait. Our prompt and reliable delivery service ensures that your hot and fresh pizza arrives
+                 in no time, ready to be enjoyed
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Link To JavaScript -->
+    <script src="script.js"></script>
+
+<a href="contact.html" style="display:block; margin-top:20px; text-align:center; font-size:20px;">Next</a>
+
+<a href="contact.html" style="display: block; margin-top: 20px; padding: 10px; background: blue; color: white; text-align: center; text-decoration: none; width: 100px;">Next</a>
+
+<a href="contact.html" style="display: block; margin-top: 20px; padding: 10px; background: blue; color: white; text-align: center; text-decoration: none; width: 100px;">Next</a>
+</body>
+</html>
